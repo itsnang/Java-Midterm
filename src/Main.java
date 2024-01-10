@@ -1,12 +1,15 @@
+import java.sql.Date;
 import java.util.Scanner;
+
+import DateConverter.DateConverter;
 import SquareAndRectangle.*;
 
-public class Mian {
+public class Main {
     public static void main(String[] args) {
         double width = 5;
         double length = 10;
         double side = 7;
-        Rectangle rectangle = new Rectangle(width, length);
+        Rectangle rectangle = new Rectangle(side, side);
         Square square = new Square(side);
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Convert short date to full date");
@@ -17,8 +20,9 @@ public class Mian {
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                ShortDateToFullDateConverter.DateFormat();
+                DateConverter.main(args);
                 break;
+                
             case 2:
                 System.out.println("Rectangle: width= "+width+" "+"length= "+length+" "+"side= "+side);
                 System.out.println("Area: " + rectangle.getArea());
@@ -38,5 +42,13 @@ public class Mian {
         }
         scanner.close();
 
+    }
+
+    private String getArea() {
+        return null;
+    }
+
+    private String getPerimeter() {
+        return null;
     }
 }
